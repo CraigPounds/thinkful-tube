@@ -3,18 +3,18 @@
 const  DATA = (function() {
   
   let data = {
-    apiKey: 'AIzaSyA68gYnpN0ykW1n-V5ZmRZ0CyUR4EJA2zM',
-    endPoint: 'https://www.googleapis.com/youtube/v3/search',
+    API_KEY: 'AIzaSyA68gYnpN0ykW1n-V5ZmRZ0CyUR4EJA2zM',
+    END_POINT: 'https://www.googleapis.com/youtube/v3/search',
     videos: [],
   };
 
-  const apiKey = data.apiKey;
-  const endPoint = data.endPoint;
+  const API_KEY = data.API_KEY;
+  const END_POINT = data.END_POINT;
   const videos = data.videos;
 
   return {
-    apiKey,
-    endPoint,
+    API_KEY,
+    END_POINT,
     videos,
   };
 }());

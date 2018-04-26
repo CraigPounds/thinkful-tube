@@ -14,4 +14,4 @@ const TEMPLATE = (function() {
   return {
     createResults,
   };
-});
+}());

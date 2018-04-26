@@ -1,4 +1,4 @@
-/* global DATA */
+/* global DATA TEMPLATE */
 'use strict';
 
 const THINKFUL_TUBE = (function() {
@@ -36,7 +36,7 @@ const THINKFUL_TUBE = (function() {
   }
 
   function render() {
-    
+    $('.results').html(TEMPLATE.createResults());
   }
 
   return {

@@ -1,9 +1,6 @@
+/* global THINKFUL_TUBE */
 'use strict';
 
-// document.ready(function() {
-
-// });
-
 $(function() {
-  
+  THINKFUL_TUBE.handleSubmit();
 });

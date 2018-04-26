@@ -18,6 +18,7 @@ const THINKFUL_TUBE = (function() {
       event.preventDefault();
       //buildQuery($('.search-input').val());
       $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
+      $('.search-input').val('');
     });
   }
 

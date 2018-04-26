@@ -22,8 +22,23 @@ const THINKFUL_TUBE = (function() {
   }
 
   function callBack(response) {
-    console.log(response);
+    //console.log(response.items);
+    DATA.videos = [];
+    response.items.forEach(item => {
+      const video = {};
+      video.id = item.id.videoId;
+      video.title = item.snippet.title;
+      video.thumbnail = item.snippet.thumbnails.high.url;
+      DATA.videos.push(video);
+    });
+    //console.log(DATA.videos);
+    render();
   }
+
+  function render() {
+    
+  }
+
   return {
     handleSubmit,
   };

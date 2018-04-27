@@ -23,21 +23,24 @@ const THINKFUL_TUBE = (function() {
   }
 
   function callBack(response) {
-    //console.log(response.items);
+    console.log(response.items);
     DATA.videos = [];
     response.items.forEach(item => {
       const video = {};
       video.id = item.id.videoId;
       video.title = item.snippet.title;
-      video.thumbnail = item.snippet.thumbnails.high.url;
+      video.thumbnail = item.snippet.thumbnails.default.url;
       DATA.videos.push(video);
     });
-    //console.log(DATA.videos);
+    console.log(DATA.videos);
     render();
   }
 
   function render() {
-    $('.results').html(TEMPLATE.createResults());
+    const results = DATA.videos.map(video => {
+      return TEMPLATE.createThumbnails(video);
+    });
+    $('.results').html(results.join(''));    
   }
 
   return {

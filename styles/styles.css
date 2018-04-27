@@ -19,6 +19,16 @@ input {
   margin: 25px 0 25px 0;
 }
 
+input[type=submit] {
+  position: relative;
+  background-image: url(https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.6_challenge_design_to_code/magnifying-glass.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  border-radius: 4px;
+}
+
 li {
   margin: auto;
   list-style: none;

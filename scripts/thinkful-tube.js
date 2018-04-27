@@ -9,14 +9,12 @@ const THINKFUL_TUBE = (function() {
       part: 'snippet',
       key: DATA.API_KEY,
     };
-    //console.log(query);
     return query;
   }
 
   function handleSubmit() {
     $('.search-form').submit((event) => {
       event.preventDefault();
-      //buildQuery($('.search-input').val());
       $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
       $('.search-input').val('');
     });

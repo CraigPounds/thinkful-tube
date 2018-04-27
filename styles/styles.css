@@ -6,14 +6,12 @@ body {
 
 h1 {
   padding: 20px;
-  background-color: red;
+  background-color: #FE2C13;
   font-size: 2em;
   font-weight: 700;
 }
 
 h2 {
-  margin: 0;
-  padding: 0;
   font-size: 1.2em;
 }
 
@@ -27,9 +25,6 @@ li {
   width: 45%
 }
 
-a {
-  margin: 0;
-}
 img {
   margin: 15px 0 15px 0;
 }

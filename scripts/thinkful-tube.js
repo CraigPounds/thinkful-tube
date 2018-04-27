@@ -12,14 +12,6 @@ const THINKFUL_TUBE = (function() {
     return query;
   }
 
-  function handleSubmit() {
-    $('.search-form').submit((event) => {
-      event.preventDefault();
-      $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
-      $('.search-input').val('');
-    });
-  }
-
   function callBack(response) {
     console.log(response.items);
     DATA.videos = [];
@@ -33,6 +25,14 @@ const THINKFUL_TUBE = (function() {
     console.log(DATA.videos);
     render();
   }
+
+  function handleSubmit() {
+    $('.search-form').submit((event) => {
+      event.preventDefault();
+      $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
+      $('.search-input').val('');
+    });
+  }  
 
   function render() {
     const results = DATA.videos.map(video => {

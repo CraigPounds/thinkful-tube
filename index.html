@@ -8,7 +8,9 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
   </head>
   <body>
     <header role="banner">
@@ -16,22 +18,24 @@
     </header>
     <main>
       <form class="search-form">
-        <input type="text" class="search-input">
+        <!-- <label for="search-input">Search</label> -->
+        <input type="text" class="search-input" placeholder="Search">
         <input type="submit" title="search" value="&nbsp;">
       </form>
-      <ul class='results'></ul>
+      <ul class="results imageGallery1"></ul>
     </main>
     <footer role="contentinfo">
-      <p>Last Updated on <time>2018-4-26</time></p>
+      <p>Last Updated on <time>2018-4-27</time></p>
     </footer>
     <script
 		  src="https://code.jquery.com/jquery-3.3.1.js"
 		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 		  crossorigin="anonymous">		  	
-	  </script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
     <script src="scripts/data/data.js"></script>
     <script src="scripts/utils/template.js"></script>
     <script src="scripts/thinkful-tube.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>    
   </body>
 </html>

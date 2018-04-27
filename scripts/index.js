@@ -3,4 +3,5 @@
 
 $(function() {
   THINKFUL_TUBE.handleSubmit();
+  $('.search-input').focus();
 });

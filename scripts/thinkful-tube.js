@@ -23,6 +23,8 @@ const THINKFUL_TUBE = (function() {
       DATA.videos.push(video);
     });
     //console.log(DATA.videos);
+    //const outputNode = $('')
+    $('.results').prop('hidden', false)
     render();
   }
 
@@ -31,6 +33,7 @@ const THINKFUL_TUBE = (function() {
       event.preventDefault();
       $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
       $('.search-input').val('');
+      $('.search-input').focus();
     });
   }  
 

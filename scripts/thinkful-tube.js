@@ -13,7 +13,6 @@ const THINKFUL_TUBE = (function() {
   }
 
   function callBack(response) {
-    //console.log(response.items);
     DATA.videos = [];
     response.items.forEach(item => {
       const video = {};
@@ -22,8 +21,6 @@ const THINKFUL_TUBE = (function() {
       video.thumbnail = item.snippet.thumbnails.default.url;
       DATA.videos.push(video);
     });
-    //console.log(DATA.videos);
-    //const outputNode = $('')
     $('.results').prop('hidden', false)
     render();
   }

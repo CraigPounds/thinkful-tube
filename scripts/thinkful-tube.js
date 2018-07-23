@@ -21,7 +21,6 @@ const THINKFUL_TUBE = (function() {
       video.thumbnail = item.snippet.thumbnails.default.url;
       DATA.videos.push(video);
     });
-    $('.results').prop('hidden', false);
     render();
   }
 

@@ -3,13 +3,32 @@
 
 const THINKFUL_TUBE = (function() {
 
-  function buildQuery(searchTerm) {
-    const query = {
-      q: searchTerm,
-      part: 'snippet',
-      key: DATA.API_KEY,
+  // function buildQuery(searchTerm) {
+  //   const query = {
+  //     q: searchTerm,
+  //     part: 'snippet',
+  //     key: DATA.API_KEY,
+  //   };
+  //   return query;
+  // }
+
+  // function getDataFromAPI(searchTerm) {
+  //   $.getJSON(DATA.END_POINT, buildQuery(searchTerm), callBack);
+  // }
+
+  function getDataFromAPI(searchTerm) {
+    const settings = {
+      url: DATA.END_POINT,
+      data: {
+        q: searchTerm,
+        part: 'snippet',
+        key: DATA.API_KEY,
+      },
+      dataType: 'json',
+      type: 'GET',
+      success: callBack,
     };
-    return query;
+    $.ajax(settings);
   }
 
   function callBack(response) {
@@ -27,7 +46,7 @@ const THINKFUL_TUBE = (function() {
   function handleSubmit() {
     $('.search-form').submit((event) => {
       event.preventDefault();
-      $.getJSON(DATA.END_POINT, buildQuery($('.search-input').val()), callBack);
+      getDataFromAPI($('.search-input').val());      
       $('.search-input').val('');
       $('.search-input').focus();
     });
